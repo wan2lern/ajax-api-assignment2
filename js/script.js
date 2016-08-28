@@ -6,7 +6,8 @@ $(function () {
         icon = '',
         mainWeather = '',
         weather = '',
-        out = '';
+        out = '',
+        city = '';
 
     $('#get-weather').click(function (e) {
         e.preventDefault();
@@ -14,42 +15,41 @@ $(function () {
     });
 
     var prepare = function () {
-        var city = $('#city').val();
+        var today = new Date();
+        var h = today.getHours();
+        var m = today.getMinutes();
+        var s = today.getSeconds();
+        city = $('#city').val();
         if (city && city != '') {
             city = city.trim();
-            getData(city, OpenWeatherURL, openAppID);
+            getData(city, OpenWeatherURL, openAppID, today);
         }
     }
 
-    function getData(cityName, openUrl, appId) {
+    function getData(cityName, openUrl, appId, time) {
+        var now = time;
         // Assign handlers immediately after making the request,
         // and remember the jqxhr object for this request
-        var jqxhr = $.get(openUrl + 'q=' + cityName + '&appid=' + appId, function (data) {
-                console.log("success");
-                console.log(data);
-                console.log('Weather in ' + data.name + ' is ' + data.weather[0].main + ', ' + data.weather[0].description);
+        var jqxhr = $.get(openUrl + 'q=' + cityName + '&units=metric' + '&appid=' + appId, function (data) {
+                // console.log('Weather in ' + data.name + ' is ' + data.weather[0].main + ', ' + data.weather[0].description);
                 temp += '<div class="weather-card">'
                 temp += '<h2>Weather in ' + data.name + ' is ' + data.weather[0].main + ', ' + data.weather[0].description + '</h2>';
                 temp += '<img id="icon" src="img/' + data.weather[0].icon + '.png" alt="Weather in ' + data.name + ' is ' + data.weather[0].main + ', ' + data.weather[0].description + '" />';
+                temp += '<p>' + now + '</p>';
+                temp += '<p>Temperature is ' + data.main.temp + ' deg Celsius</p>';
+                temp += '<p>Windspeed is ' + data.wind.speed + 'm/s</p>';
                 temp += '</div>';
-            })
-            .done(function () {
-                console.log("second success");
+                // load in result
                 $('#out').html(temp);
             })
+            .done(function () {
+                console.log("AJAX call done");
+            })
             .fail(function () {
-                console.log("error");
+                console.log("ERROR!!!");
             })
             .always(function () {
-                console.log("finished");
+                console.log("Finished");
             });
-
-
-        // Perform other work here ...
-
-        // Set another completion function for the request above
-        jqxhr.always(function () {
-            // alert("second finished");
-        });
     }
 });
