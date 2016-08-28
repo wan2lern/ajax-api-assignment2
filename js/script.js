@@ -25,11 +25,11 @@ $(function () {
         }
     }
 
+    // AJAX GET
     function getData(cityName, openUrl, appId, time, unitsDeg) {
         var now = time;
-        // Assign handlers immediately after making the request,
-        // and remember the jqxhr object for this request
-        var jqxhr = $.get(openUrl + 'q=' + cityName + '&units=' + unitsDeg + '&appid=' + appId, function (data) {
+        // 
+        $.get(openUrl + 'q=' + cityName + '&units=' + unitsDeg + '&appid=' + appId, function (data) {
                 // console.log('Weather in ' + data.name + ' is ' + data.weather[0].main + ', ' + data.weather[0].description);
                 // console.log(data);
                 temp += '<div class="weather-card">'
