@@ -1,5 +1,5 @@
 # ajax-api-assignment2
-Working with AJAX and open API:s
+Arbeta med AJAX och öppna API:er
 
 # Jobba med API:er
 - Gör en .get() som hämtar en eller flera objekt från mina test-apier. Använd antingen det simplare https://bakverksAPI.herokuapp.com/bakverk eller https://company-generator. herokuapp.com/company
@@ -10,5 +10,7 @@ Working with AJAX and open API:s
 - Jag hämtar data med jQuery $.get()
 - Visar väder, min och max temperatur + temperatur
 - Visar väderikon beroende av respons
+
 ## Problem
-Jag stötte på problem med att välja vilken enhet som temperaturen skulle visas i. Ibland visade den Standard, metric = Celsius (vilket jag ville ha), eller imperial.
+Jag stötte på problem med att välja vilken enhet som temperaturen skulle visas i. 
+- Ibland visade den standard?, metric = Celsius (vilket jag ville ha), eller imperial.
