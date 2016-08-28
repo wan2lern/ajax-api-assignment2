@@ -10,3 +10,5 @@ Working with AJAX and open API:s
 - Jag hämtar data med jQuery $.get()
 - Visar väder, min och max temperatur + temperatur
 - Visar väderikon beroende av respons
+## Problem
+Jag stötte på problem med att välja vilken enhet som temperaturen skulle visas i. Ibland visade den Standard, metric = Celsius (vilket jag ville ha), eller imperial.
