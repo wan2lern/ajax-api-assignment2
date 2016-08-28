@@ -119,6 +119,9 @@ footer {
         font-size: 2em;
     }
     .main-content {
+        width: 60%;
+    }
+    .weather-card {
         width: 80%;
     }
 }

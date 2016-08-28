@@ -28,7 +28,7 @@ $(function () {
     // AJAX GET
     function getData(cityName, openUrl, appId, time, unitsDeg) {
         var now = time;
-        // 
+        // jQuery get
         $.get(openUrl + 'q=' + cityName + '&units=' + unitsDeg + '&appid=' + appId, function (data) {
                 // console.log('Weather in ' + data.name + ' is ' + data.weather[0].main + ', ' + data.weather[0].description);
                 // console.log(data);
