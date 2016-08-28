@@ -12,8 +12,10 @@ body {
     font-family: Roboto, sans-serif;
 }
 
-.hidden {
-    display: none;
+#icon {
+    width: 120px;
+    height: auto;
+    margin: 2em auto;
 }
 
 .main-header {
@@ -35,6 +37,7 @@ h1.main-heading {
 }
 
 .row {
+    margin: 10px 0;
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -46,6 +49,28 @@ h1.main-heading {
     -ms-flex-direction: column;
     -webkit-flex-direction: column;
     flex-direction: column;
+}
+
+.weather-card {
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    -ms-flex-direction: column;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    border: 2px solid rgb(230, 230, 230);
+    background-color: white;
+    color: deepskyblue;
+    border-radius: 4px;
+    width: 90%;
+    height: auto;
+    padding: 15px;
+    margin: 10px auto;
 }
 
 footer {
