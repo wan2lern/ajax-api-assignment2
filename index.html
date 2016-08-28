@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>jQuery, AJAX and open API:s</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <meta name="author" content="Daniel Karjanlahti">
+    <meta name="keywords" content="AJAX, jQuery, Open API">
+    <meta name="description" content="Working with jQuery, AJAX and open API:s">
+</head>
+
+<body>
+    <div class="header-wrapper">
+        <header class="main-header">
+            <h1 class="main-heading">{ jQuery, AJAX and open API:s }</h1>
+        </header>
+    </div>
+
+    <section id="main" class="main-content">
+        <!-- load in content async -->
+        <div class="row">
+            <p>Get weather data for <span id="get-sthlm">Stockholm</span></p>
+        </div>
+        <div id="sthlm"></div>
+        <div class="row">
+            <p>Get weather data for <span id="get-uk">London</span></p>
+        </div>
+        <div id="uk"></div>
+    </section>
+
+    <footer>
+        <p>Created by Daniel K &copy; 2016 GNU</p>
+    </footer>
+
+    <script src="js/jquery-3.1.0.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
