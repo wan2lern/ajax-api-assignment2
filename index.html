@@ -21,13 +21,15 @@
     <section id="main" class="main-content">
         <!-- load in content async -->
         <div class="row">
-            <p>Get weather data for <span id="get-sthlm">Stockholm</span></p>
+            <form>
+                <label for="city">Get weather data for:</label>
+                <input type="text" name="city" id="city">
+                <input type="button" id="get-weather" name="get-weather" value="GET">
+            </form>
         </div>
-        <div id="sthlm"></div>
-        <div class="row">
-            <p>Get weather data for <span id="get-uk">London</span></p>
-        </div>
-        <div id="uk"></div>
+        <table id="out" class="hidden">
+
+        </table>
     </section>
 
     <footer>

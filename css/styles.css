@@ -12,6 +12,10 @@ body {
     font-family: Roboto, sans-serif;
 }
 
+.hidden {
+    display: none;
+}
+
 .main-header {
     border-top: 4px solid rgb(0, 187, 255);
     border-bottom: 5px solid rgb(0, 187, 255);
