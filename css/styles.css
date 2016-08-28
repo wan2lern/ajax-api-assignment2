@@ -12,10 +12,34 @@ body {
     font-family: Roboto, sans-serif;
 }
 
+.error {
+    color: orangered;
+}
+
 #icon {
     width: 120px;
     height: auto;
     margin: 2em auto;
+}
+
+form {
+    width: 400px;
+    padding: 2em;
+}
+
+input {
+    margin-bottom: 10px;
+    border-radius: 4px;
+    width: 100%;
+    padding: 4px 10px;
+}
+
+input[type=button] {
+    border-radius: 4px;
+    width: 100% !important;
+    padding: 4px 10px;
+    background-color: deepskyblue;
+    margin: 0 0 4px 7px;
 }
 
 .main-header {
@@ -29,6 +53,8 @@ h1.main-heading {
     line-height: 150%;
     font-family: monospace;
     font-size: 1.3em;
+    color: deepskyblue;
+    text-shadow: 0 1px 1px #333;
 }
 
 .main-content {
